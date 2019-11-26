@@ -51,10 +51,10 @@
 
       <section class="introduction">
         <p>
-          SkoHub seeks to implement a novel approach in syndicating content on the web by combining current web standards for sending notifications and subscribing to feeds with knowledge organization systems (KOS, sometimes also called “controlled vocabularies”).
+          SkoHub supports a novel approach for finding content on the web. It allows to follow specific subjects in order to be notified when new content about that subject is published. This is done by putting Knowledge Organization Systems (KOS, sometimes also called "controlled vocabularies") online according to the <a href="">SKOS</a> standard. Additionally, they are exposed using the (social) networking protocols ActivityPub &amp; Linked Data Notifications. This effectively turns the published vocabularies into hubs that provide structured metadata about and links to web content in real time.
         </p>
         <p>
-          The project has four deliverables. While working on the backend infrastructure for receiving and pushing notifications (skohub-pubsub), we also want to provide people with means to publish a controlled vocabulary along with inboxes (skohub-vocabs), to link to subjects and send notifications (skohub-editor) and to subscribe to notifications in the browser (skohub-deck).        </p>
+          The project has four deliverables. The core is the back end infrastructure for publishing vocabularies on the web (Skohub Vocabs) and for receiving and pushing notifications (SkoHub PubSub). Additionally, we provide an editor to describe web resources according to a common metadata schema and to send notifications (SkoHub Editor). The editor can also be used as a browser plugin for Firefox and Chrome (SkoHub Extension).
         </p>
       </section>
 
@@ -68,39 +68,35 @@
             <h3>skohub-pubsub</h3>
             <p class="description">Inboxes and subscriptions</p>
             <p>
-                This part provides the SkoHub core infrastructure, setting up basic inboxes for subjects plus the ability of subscribing to push subscriptions for each new notification.
+                SkoHub Pubsub provides the SkoHub core infrastructure, setting up basic inboxes for subjects plus the ability of subscribing to push subscriptions for each new notification.
             </p>
             <a class="btn" href="https://github.com/hbz/skohub-pubsub">Code</a>
           </div>
 
           <div class="block">
             <h3>skohub-vocabs</h3>
-            <p class="description">Static site generator for Simple Knowledge Organization Systems</p>
-            <p>This part of the project covers the need to easily publish a controlled vocabulary as a SKOS file, with a basic lookup API and a nice HTML view including links to an inbox for each subject.</p>
+            <p class="description">SkoHub Vocabs is static site generator for Simple Knowledge Organization Systems</p>
+            <p>
+              This part of the project covers the need to easily publish a controlled vocabulary as a SKOS file, with a basic lookup API and a nice HTML view including links to an inbox for each subject. Also, each subject is exposed as an ActivityPub actor in order to be used with SkoHub Pubsub. For a walkthrough, see the <a href="http://blog.lobid.org/2019/09/27/presenting-skohub-vocabs.html">blog post</a>.
+            </p>
             <a class="btn" href="https://github.com/hbz/skohub-vocabs">Code</a>
           </div>
 
           <div class="block">
             <h3>skohub-editor</h3>
-            <p class="description">Describing & linking learning resources, sending notifications</p>
+            <p class="description">Describing &amp; linking learning resources, sending notifications</p>
             <p>
-                The editor will run in the browser and enable structured description of educational resources published anywhere on the web. It includes validation of the entered content for each field and lookup of controlled values via the API provided by skohub-ssg.
+                The editor runs in the browser and enables structured description of educational resources published anywhere on the web. It includes validation of the entered content for each field and lookup of controlled values via the API provided by skohub-vocabs.
             </p>
             <a class="btn" href="https://github.com/hbz/skohub-editor">Code</a>
           </div>
 
           <div class="block">
-            <h3>skohub-deck</h3>
-            <p class="description">Browser-based subscription to subjects</p>
-            <p>
-                The SkoHub deck is a proof of concept to show that the technologies developed actually work. It enables people to subscribe to notifications for specific subjects in the browser. The incoming notifications will be shown in a Tweetdeck-like interface.
-            </p>
-            <a class="btn" href="https://github.com/hbz/skohub-deck">Code</a>
-          </div>
-
-          <div class="block">
             <h3>skohub-extension</h3>
             <p class="description">SkoHub-editor as an extension for Firefox and Chrome</p>
+            <p>
+              The browser extension allows to easily see the editor and the described web resource side by side.
+            </p>
             <a class="btn" href="https://github.com/hbz/skohub-extension">Code</a>
           </div>
 
