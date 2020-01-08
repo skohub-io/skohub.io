@@ -20,11 +20,6 @@ body {
   background-color: rgb(242, 245, 247);
 }
 
-a {
-  text-decoration: none;
-  color: hsl(0, 0%, 24%);
-}
-
 a:hover {
   color: hsl(161.6, 71.8%, 41.8%);
 }
