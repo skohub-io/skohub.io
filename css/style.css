@@ -7,13 +7,13 @@ Fonts
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/ubuntu-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-regular.eot'); /* IE9 Compat Modes */
     src: local(''),
-    url('../fonts/ubuntu-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/ubuntu-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/ubuntu-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/ubuntu-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/ubuntu-v20-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
     }
 
 /* ubuntu-700 - latin */
@@ -21,13 +21,13 @@ Fonts
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/ubuntu-v20-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-700.eot'); /* IE9 Compat Modes */
     src: local(''),
-    url('../fonts/ubuntu-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/ubuntu-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-    url('../fonts/ubuntu-v20-latin-700.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/ubuntu-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/ubuntu-v20-latin-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('https://skohub-io.github.io/skohub.io//fonts/ubuntu-v20-latin-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
     }
 
 
@@ -229,7 +229,7 @@ main * {
     position: relative;
     margin: 0px auto;
     max-width: 1400px;
-    background: url(../img/skohub-wave.svg) no-repeat;
+    background: url(https://skohub-io.github.io/skohub.io//img/skohub-wave.svg) no-repeat;
     background-position: left 30px;
     background-size: 100% auto;
     }
@@ -339,7 +339,7 @@ main h3 {
     }
 
 .skohub-screen {
-    background: url(../img/skohub-wave-filled.svg) no-repeat;
+    background: url(https://skohub-io.github.io/skohub.io//img/skohub-wave-filled.svg) no-repeat;
     background-position: left 110px;
     background-size: 100% auto;
     }
