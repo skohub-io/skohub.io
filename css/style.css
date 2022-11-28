@@ -1,0 +1,685 @@
+/*----------------------------------------------------------------------
+Fonts
+----------------------------------------------------------------------*/
+
+/* ubuntu-regular - latin */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/ubuntu-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('../fonts/ubuntu-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/ubuntu-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/ubuntu-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/ubuntu-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/ubuntu-v20-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+    }
+
+/* ubuntu-700 - latin */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/ubuntu-v20-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('../fonts/ubuntu-v20-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/ubuntu-v20-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/ubuntu-v20-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/ubuntu-v20-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/ubuntu-v20-latin-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
+    }
+
+
+/*----------------------------------------------------------------------
+colors
+----------------------------------------------------------------------*/
+
+:root {
+    --skohub-greendark: #0f554b;
+    --skohub-greenmiddle: #14968c;
+    --skohub-greenlight: #28c8af;
+    --skohub-greenthin: #37fad2;
+    --skohub-greenblack: #051e1e;
+    --skohub-action: #e6007d;
+    --skohub-notice: #fab432;
+    --skohub-greydark: #9b9b9b;
+    --skohub-greymiddle: #c8c8c8;
+    --skohub-greylight: #ebebeb;
+    --skohub-white: #ffffff;
+    }
+
+
+/*----------------------------------------------------------------------
+global structure & normalize
+----------------------------------------------------------------------*/
+
+body {
+    margin: 0;
+    border: 0 none;
+    padding: 0;
+    color: var(--skohub-greendark);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+
+p, form, img, legend, ul, ol, li, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0;
+    border: 0 none;
+    padding: 0;
+    }
+ 
+input, textarea, button, select {
+    margin: 0;
+    font: inherit;
+    text-transform: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
+    }
+
+input[type="submit"], button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+
+textarea {
+    overflow: auto;
+    }
+
+a {
+    color: var(--skohub-action);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+
+a:hover, a:focus {
+    color: var(--skohub-greenmiddle);
+    outline-width: 0;
+    }
+    
+a:active {
+    color: var(--skohub-greendark);
+    outline-width: 0;
+    }
+
+mark {
+    background-color: var(--skohub-greendark);
+    color: color: var(--skohub-white);
+    padding: 1px;
+    border-radius: 5px;
+    }
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    }
+
+sub {
+    bottom: -0.25em;
+    }
+
+sup {
+    top: -0.5em;
+    }
+    
+.wrapper {
+    margin: 0px auto;
+    max-width: 1400px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
+    }
+
+
+/*----------------------------------------------------------------------
+Header
+----------------------------------------------------------------------*/
+
+header * {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+
+.header-content {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    margin: 60px 0 0 0;
+    }
+
+.portal-logo {
+    display: block;
+    width: 160px;
+    font-size: 0;
+    color: transparent;
+    }
+    
+.portal-logo img {
+    width: 120px;
+    height: auto;
+    }    
+
+.header-content nav {
+    width: calc(100% - 160px);
+    text-align: right;
+    }
+
+.header-content nav ul {
+    list-style: none;
+    }
+
+.header-content nav li {
+    display: inline-block;
+    margin: 0 0 15px 10px;
+    }
+
+.header-content nav li a {
+    display: block;
+    border: 1px solid var(--skohub-greendark);
+    color: var(--skohub-greendark);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    }
+
+.header-content nav li a:hover {
+    border: 1px solid var(--skohub-greenmiddle);
+    color: var(--skohub-greenmiddle);
+    }
+    
+    
+/*----------------------------------------------------------------------
+Main
+----------------------------------------------------------------------*/
+
+main * {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    }
+
+.introduction h1 {
+    max-width: 800px;
+    margin: 30px auto 90px auto;
+    color: var(--skohub-greenmiddle);
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 55px;
+    text-align: center;
+    }
+
+.main-intotext {
+    background: var(--skohub-greylight);
+    }
+
+.main-keyvisual {
+    position: relative;
+    margin: 0px auto;
+    max-width: 1400px;
+    background: url(../img/skohub-wave.svg) no-repeat;
+    background-position: left 30px;
+    background-size: 100% auto;
+    }
+
+.keyvisual-content {
+    margin: 0px auto;
+    max-width: 900px;
+    height: auto;
+    background: var(--skohub-greylight);
+    border-radius: 30px;
+    box-shadow: 0px 20px 30px var(--skohub-greymiddle);
+    text-align: center;
+    color: var(--skohub-greydark);
+    }
+
+.main-intotext-content {
+    position: relative;
+    max-width: 900px;
+    margin: -300px auto 0 auto;
+    padding: 390px 0 60px 0;
+    }
+
+.main-intotext-content p {
+    padding: 0 0 30px 0;
+    }
+
+.products {
+    margin: 90px 0 60px 0;
+    }
+
+main h2 {
+    color: var(--skohub-greenmiddle);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 45px;
+    margin: 0 0 30px 0;
+    }
+
+main h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 0 0 15px 0;
+    }
+
+.button-first {
+    display: inline-block;
+    background: var(--skohub-action);
+    color: var(--skohub-white);
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    }
+
+.button-first:hover {
+    background: var(--skohub-greenmiddle);
+    color: var(--skohub-white);
+    }
+
+.teaser-items {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    margin: 60px -30px 0 0;
+    }
+    
+.teaser {
+    border-radius: 30px;
+    margin: 0 30px 60px 0;
+    width: calc(50% - 30px);
+    background: linear-gradient(180deg, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 70%);
+    }
+
+.teaser:hover {
+    margin: -5px 30px 65px 0;
+    }
+
+.teaser-content {
+    padding: 60px;
+    }
+
+.teaser-description {
+    color: var(--skohub-greenmiddle);
+    font-size: 25px;
+    line-height: 30px;
+    margin: 0 0 15px 0;
+    }
+
+.teaser-description a {
+    color: var(--skohub-greenmiddle);
+    }
+
+.teaser-status {
+    display: inline-block;
+    border: 1px solid var(--skohub-greydark);
+    color: var(--skohub-greydark);
+    border-radius: 30px;
+    padding: 10px 15px;
+    margin: 0 0 30px 5px;
+    }
+
+.key-product {
+    margin: 0 0 90px 0;
+    }
+
+.skohub-screen {
+    background: url(../img/skohub-wave-filled.svg) no-repeat;
+    background-position: left 110px;
+    background-size: 100% auto;
+    }
+
+.skohub-screen img {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+    }
+
+.key-product-message {
+    text-align: center;
+    margin: 30px 0 0 0;
+    }
+
+.works-with {
+    text-align: center;
+    margin: 0 0 90px 0;
+    }
+
+.works-with ul {
+    list-style: none;
+    }
+
+.works-with li {
+    display: inline-block;
+    margin: 0 10px;
+    }
+
+.works-with img {
+    width: 60px;
+    height: auto;
+    }
+
+/*----------------------------------------------------------------------
+Footer
+----------------------------------------------------------------------*/
+
+footer {
+    margin: 0;
+    }
+
+.footer {
+    background: var(--skohub-greenmiddle);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    }
+
+.footer-columnset {
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    margin: 60px 0 0 0;
+    }
+
+.footer-columnset article:first-child {
+    width: 260px;
+    }
+    
+.footer-columnset article:nth-child(2) {
+    width: calc(100% - 520px);
+    }
+
+.footer-columnset article:last-child {
+    width: 260px;
+    text-align: right;
+    }
+
+.sponsor-logo {
+    display: inline-block;
+    margin: 60px;
+    }
+
+.portal-footer-logo {
+    display: inline-block;
+    margin: 0 60px 0 0;
+    background: var(--skohub-white);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 50px 20px 20px 20px;
+    }
+
+.footer-nav {
+    list-style: none;
+    text-align: center;
+    margin: 50px 0 0 0;
+    }
+
+.footer-nav li {
+    display: inline-block;
+    margin: 0 5px;
+    }
+
+.footer-nav li a {
+    display: inline-block;
+    border: 1px solid transparent;
+    color: var(--skohub-white);
+    border-radius: 30px;
+    padding: 10px 17px;
+    margin: 0 0 30px 5px;
+    text-decoration: none;
+    }
+
+.footer-nav li a:hover {
+    border: 1px solid var(--skohub-white);
+    color: var(--skohub-white);
+    }
+
+
+/*----------------------------------------------------------------------
+Small-Desktop-Styles
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1480px) { 
+
+    .wrapper {
+        margin: 0px 30px;
+        width: calc(100% - 60px);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;  
+        }
+
+    .header-content {
+        margin: 30px 0 0 0;
+        }
+    
+    .portal-logo {
+        width: 90px;
+        }
+        
+    .portal-logo img {
+        width: 90px;
+        }    
+    
+    .header-content nav {
+        width: calc(100% - 90px);
+        }
+
+}
+
+
+/*----------------------------------------------------------------------
+Tablet-Styles
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1024px) { 
+
+    .introduction h1 {
+        width: calc(100% - 60px);
+        margin: 30px 30px 60px 30px;
+        font-size: 40px;
+        line-height: 45px;
+        }
+        
+    .main-keyvisual {
+        position: relative;
+        margin: 0px 30px;
+        width: calc(100% - 60px);
+        }
+    
+    .keyvisual-content {
+        margin: 0px 30px;
+        }
+    
+    .main-intotext-content {
+        margin: -200px 30px 0 30px;
+        padding: 260px 0 30px 0;
+        }
+
+    .teaser-items {
+        margin: 60px 0 0 0;
+        }
+        
+    .teaser,
+    .teaser:hover {
+        margin: 0 0 60px 0;
+        width: 100%;
+        }
+
+    .products {
+        margin: 60px 0 0 0;
+        }
+
+    .skohub-screen {
+        background-position: left 70px;
+        }
+    
+    .skohub-screen img {
+        width: calc(100% - 60px);
+        margin: 0 30px;
+        }
+
+    .footer-columnset {
+        margin: 30px 0 0 0;
+        flex-direction: column-reverse;
+        }
+
+    .footer-columnset article:first-child {
+        width: 100%;
+        }
+        
+    .footer-columnset article:nth-child(2) {
+        width: 100%;
+        }
+    
+    .footer-columnset article:last-child {
+        width: 100%;
+        text-align: center;
+        }
+
+    .portal-footer-logo {
+        margin: 0 0 0 0;
+        }
+    
+    .sponsor-logo {
+        margin: 30px;
+        text-align: center;
+        display: block;
+        }
+    
+    .footer-nav li {
+        display: block;
+        margin: 0 30px;
+        }
+    
+    .footer-nav li a {
+        display: block;
+        border: 0;
+        border-top: 1px solid var(--skohub-white);
+        border-radius: 0;
+        padding: 10px 0px;
+        margin: 0 0 0 0;
+        text-decoration: none;
+        }
+    
+    .footer-nav li a:hover {
+        border: 0;
+        border-top: 1px solid var(--skohub-white);
+        }
+
+}
+
+
+/*----------------------------------------------------------------------
+Mobile-Styles
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width: 700px) { 
+
+    body {
+        font-size: 16px;
+        line-height: 24px;
+        }
+    
+    .portal-logo {
+        width: 60px;
+        }
+        
+    .portal-logo img {
+        width: 60px;
+        }    
+    
+    .header-content nav {
+        width: calc(100% - 60px);
+        }
+
+    .header-content nav li a,
+    .button-first {
+        font-size: 18px;
+        }
+
+    .introduction h1 {
+        font-size: 30px;
+        line-height: 35px;
+        }
+
+    .main-keyvisual {
+        position: relative;
+        background: transparent;
+        margin: 0;
+        width: 100%;
+        }
+
+    .main-intotext-content {
+        margin: -90px 30px 0 30px;
+        padding: 150px 0 30px 0;
+        }
+
+    .teaser-content {
+        padding: 30px;
+        }
+
+    main h2 {
+        font-size: 30px;
+        line-height: 35px;
+        }
+    
+    main h3 {
+        font-size: 20px;
+        line-height: 25px;
+        }
+
+}
+
+    
+/*----------------------------------------------------------------------
+Print Styles
+----------------------------------------------------------------------*/
+@media print {
+    * {
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        background: transparent !important;
+        }
+    
+
+    /* Show link destinations in brackets after the link text */
+    a[href]:after {
+        content: " (" attr(href) ") ";
+        }
+    
+    a[href] {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #000;
+        border: none;
+        }
+    
+    /* Don't show link destinations for JavaScript or internal links */ 
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content:"";
+        }
+    
+    /* Show abbr title value in brackets after the text */
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+        }
+}
+
