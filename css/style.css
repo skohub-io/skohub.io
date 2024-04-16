@@ -111,7 +111,7 @@ a:active {
 
 mark {
     background-color: var(--skohub-greendark);
-    color: color: var(--skohub-white);
+    color: var(--skohub-white);
     padding: 1px;
     border-radius: 5px;
     }
@@ -252,8 +252,13 @@ main * {
     padding: 390px 0 60px 0;
     }
 
-.main-intotext-content p {
-    padding: 0 0 30px 0;
+.main-intotext-content ul, ol {
+    margin-left: 20px;
+}
+
+.main-intotext-content h2 {
+    text-align: center;
+    margin-top: 30px ;
     }
 
 .products {
@@ -373,6 +378,15 @@ main h3 {
     width: 60px;
     height: auto;
     }
+
+details > summary {
+  color: var(--skohub-greenmiddle);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 45px;
+  margin: 0 0 30px 0;
+  cursor: pointer;
+}
 
 /*----------------------------------------------------------------------
 Footer
