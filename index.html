@@ -37,10 +37,46 @@
             
             <article class="main-intotext">
                 <div class="main-intotext-content">
-                    <p>SkoHub supports a novel approach for finding content on the web. The general idea is to extend the scope of Knowledge Organization Systems (KOS) to also act as communication hubs for publishers and information seekers. In effect, SkoHub allows to follow specific subjects in order to be notified when new content about that subject is published.</p>
-                    <p>The approach is realized by putting Knowledge Organization Systems online according to the SKOS standard. Additionally, they are exposed using the (social) networking protocols <a href="https://activitypub.rocks" target="_blank">ActivityPub</a> & <a href="https://www.w3.org/TR/ldn/" target="_blank">Linked Data Notifications</a>. This effectively turns the published vocabularies into hubs that provide structured metadata about and links to web content in real time.</p>
-                    <p>The project to create a production-ready version of SkoHub has been carried out by the <a href="https://www.hbz-nrw.de" target="_blank">North-Rhine Westphalian Library Service Centre (hbz)</a> in cooperation with <a href="http://graphthinking.com" target="_blank">graphthinking GmbH</a> with four deliverables. The core is the back end infrastructure for publishing vocabularies on the web (Skohub Vocabs) and for receiving and pushing notifications (SkoHub PubSub). Additionally, we provide an editor to describe web resources according to a common metadata schema and to send notifications (SkoHub Editor). The editor can also be used as a browser plugin for Firefox and Chrome (SkoHub Extension).</p>
-                    <p>For further information, see the <a href="https://blog.skohub.io">blog posts</a> about the project or the <a href="https://github.com/skohub-io/swib20-workshop" target="_blank">material from a workshop at SWIB20</a> (including lots of walkthrough videos).</p>
+                  <p>SkoHub enables easy management and publication of SKOS vocabularies, widely used in knowledge organization systems across libraries, archives, and educational institutions. By leveraging our tools, users can quickly transform their vocabularies into machine- and human-readable formats using Git-based workflows.</p>
+    
+                  <h2>Key Features</h2>
+                  <ul>
+                    <li><strong>Git-based workflows:</strong> Utilize Git for editorial control, ensuring content is current and accurate.</li>
+                    <li><strong>Human- and machine-readability:</strong> Access vocabularies in formats understandable by both humans and software.</li>
+                    <li><strong>Serverless setup:</strong> Run SkoHub without dedicated server infrastructure.</li>
+                  </ul>
+    
+                  <h2>Example Vocabularies</h2>
+                  <p style="margin-bottom: 10px;">These are some example vocabularies published with SkoHub Vocabs: </p>
+                  <ul>
+                    <li>Kerndatensatz Forschung: <a href="https://w3id.org/kdsf-ffk/" target="_blank">https://w3id.org/kdsf-ffk/</a></li>
+                    <li>Hochschulfächersystematik: <a href="https://w3id.org/kim/hochschulfaechersystematik/scheme" target="_blank">https://w3id.org/kim/hochschulfaechersystematik/scheme</a></li>
+                  </ul>
+    
+                  <h2>Quick Start Guide</h2>
+                  <ol>
+                    <li><strong>Fork</strong> a vocabulary repository using the approach outlined in <a href="https://github.com/skohub-io/skohub-pages">SkoHub Pages</a>.</li>
+                    <li><strong>Edit</strong> your vocabulary.</li>
+                    <li><strong>Publish</strong> your changes to make them live.</li>
+                  </ol>
+    
+                  <h2>Expand Your Setup</h2>
+                  <ul>
+                    <li>Run your own <a href="https://github.com/skohub-io/skohub-webhook">SkoHub Webhook</a> instance for full control.</li>
+                    <li>Try out our <a href="https://reconcile-publish.skohub.io/">SkoHub Reconcile test instance</a> or set up your own <a href="https://github.com/skohub-io/skohub-reconcile">Reconciliation Service API</a> to reconcile data with your vocabularies in a variety of services (OpenRefine, Cocoda, etc.).</li>
+                  </ul>
+    
+                  <h2>Tested And Used By a Variety of Institutions</h2>
+                  <ul>
+              <li>WirLernenOnline (<a href="https://vocabs.openeduhub.de/">https://vocabs.openeduhub.de/</a>)</li>
+                    <li>Open Educational Resource Search Index</li>
+                    <li>Kompetenzzentrum Interoperable Metadaten (<a href="https://github.com/search?q=org%3Adini-ag-kim+skos&type=repositories">SKOS Repositories</a>)</li>
+                    <li>Institut für Qualitätsentwicklung im Bildungswesen (<a href="https://iqb-vocabs.github.io/">https://iqb-vocabs.github.io/</a>)</li>
+                    <li>FWU - Das Medieninstitut der Länder (<a href="https://vocabs.sodix.de/">https://vocabs.sodix.de/)</a></li>
+                  </ul>
+                  
+                  <p style="margin-top: 20px;">For more details, explore the <a href="https://blog.skohub.io" target="_blank">SkoHub blog</a>.</p>
+
                 </div>            
             </article>
         </section>
@@ -52,56 +88,84 @@
                     
                     <div class="teaser">
                         <div class="teaser-content">
-                            <h3>SkoHub-Pubsub</h3>
-                            <p class="teaser-description">Inboxes and subscriptions</p>
-                            <a class="button-first" href="https://github.com/skohub-io/skohub-pubsub" target="_blank">Code</a>
-                            <p class="teaser-status">Status: Alpha</p>
-                            <p>SkoHub Pubsub provides the SkoHub core infrastructure, setting up basic inboxes for subjects plus the ability of subscribing to push subscriptions for each new notification. For details, see the <a href="https://blog.skohub.io/2020-06-25-skohub-pubsub/">blog post</a>.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="teaser">
-                        <div class="teaser-content">
-                            <h3>SkoHub-Vocabs</h3>
+                            <h3>SkoHub Vocabs</h3>
                             <p class="teaser-description">SkoHub Vocabs is a static site generator for Simple Knowledge Organization Systems</p>
                             <a class="button-first" href="https://github.com/skohub-io/skohub-vocabs" target="_blank">Code</a>
-                            <p class="teaser-status">Status: Stable beta</p>
+                            <p class="teaser-status">Status: Stable Beta</p>
                             <p>This part of the project covers the need to easily publish a controlled vocabulary as a SKOS file, with a basic lookup API and a nice HTML view including links to an inbox for each subject (<a href="https://w3id.org/class/esc/scheme" target="_blank">example</a>). Also, each subject is exposed as an ActivityPub actor in order to be used with SkoHub Pubsub. For details, see the <a href="https://blog.skohub.io/2019-09-27-skohub-vocabs/">blog post</a>.</p>
                         </div>
                     </div>
-        
-                  <div class="teaser">
-                    <div class="teaser-content">
-                        <h3>SkoHub-Editor</h3>
-                        <p class="teaser-description">Describing &amp; linking learning resources, sending notifications</p>
-                        <a class="button-first" href="https://github.com/skohub-io/skohub-editor" target="_blank">Code</a>
-                        <p class="teaser-status">Status: Alpha</p>
-                        <p>The editor runs in the browser and enables structured description of educational resources published anywhere on the web. It includes validation of the entered content for each field and lookup of controlled values via the API provided by skohub-vocabs. For a walkthrough, see the <a href="https://blog.skohub.io/2020-03-31-skohub-editor/">blog post</a>.</p>
+
+                    <div class="teaser">
+                        <div class="teaser-content">
+                            <h3>SkoHub Pages</h3>
+                            <p class="teaser-description">The easiest way of publishing SKOS vocabularies</p>
+                            <a class="button-first" href="https://github.com/skohub-io/skohub-pages" target="_blank">Code</a>
+                            <p class="teaser-status">Status: Stable Beta</p>
+                            <p>An example repository that you can fork to publish your SKOS vocabularies using GitHub infrastructure (Actions and Pages). For details, see the <a href="https://blog.skohub.io/2024-03-21-skohub-pages/">blog post</a>.</p>
+                        </div>
                     </div>
-                  </div>
-        
+
                   <div class="teaser">
                     <div class="teaser-content">
-                        <h3>SkoHub-Extension</h3>
-                        <p class="teaser-description">SkoHub-editor as an extension for <a href="https://addons.mozilla.org/firefox/addon/skohub-extension/" target="_blank">Firefox</a> and <a href="https://chrome.google.com/webstore/detail/skohub/ghalhmcgaicdcpmdicinaegnoanfmggd" target="_blank">Chrome</a></p>
-                        <a class="button-first" href="https://github.com/skohub-io/skohub-extension" target="_blank">Code</a>
-                        <p class="teaser-status">Status: Alpha</p>
-                        <p>The browser extension allows to easily see the editor and the described web resource side by side.</p>
-                    </div>
-                  </div>
-        
-                  <div class="teaser">
-                    <div class="teaser-content">
-                        <h3>SkoHub-Reconcile</h3>
+                        <h3>SkoHub Reconcile</h3>
                         <p class="teaser-description">Use your SKOS vocabularies in reconciliation services</p>
                         <a class="button-first" href="https://github.com/skohub-io/skohub-reconcile" target="_blank">Code</a>
-                        <p class="teaser-status">Status: Alpha</p>
-                        <p>SkoHub Reconcile provides an API conforming to the <a href="https://github.com/reconciliation-api/specs/">Reconciliation API specification</a>. V2 and the current draft are supported. To upload your vocabularies use the <a href="https://github.com/skohub-io/skohub-reconcile-publish">SkoHub Reconcile Publish module</a>.</p>
+                        <p class="teaser-status">Status: Beta</p>
+                        <p>SkoHub Reconcile provides an API conforming to the <a href="https://github.com/reconciliation-api/specs/">Reconciliation API specification</a>. V2 and the current draft are supported. To upload your vocabularies use the <a href="https://github.com/skohub-io/skohub-reconcile-publish">SkoHub Reconcile Publish module</a>. Try it out on our <a href="https://reconcile-publish.skohub.io/">SkoHub Reconcile test server</a>.</p>
+                    </div>
+                  </div>
+
+                  <div class="teaser">
+                    <div class="teaser-content">
+                        <h3>SkoHub Shapes</h3>
+                        <p class="teaser-description">Validate your SKOS vocabularies with SHACL</p>
+                        <a class="button-first" href="https://github.com/skohub-io/skohub-shapes" target="_blank">Code</a>
+                        <p class="teaser-status">Status: Beta</p>
+                <p>To validate your SKOS vocabularies we developed a set of <a href="https://www.w3.org/TR/shacl/">SHACL shapes</a>. Currently we have a basic SKOS shape that checks against the class and property definitions defined in the <a href="https://www.w3.org/TR/skos-reference/">SKOS Reference</a> and a slightly stricter SkoHub Shape that has some SkoHub specific constraints.</p>
                     </div>
                   </div>
                 </div>
 
-            </div>
+            <details>
+              <summary>Inactive Repositories</summary>
+              <div class="teaser-items">
+
+                <div class="teaser">
+                    <div class="teaser-content">
+                        <h3>SkoHub Pubsub</h3>
+                        <p class="teaser-description">Inboxes and subscriptions</p>
+                        <a class="button-first" href="https://github.com/skohub-io/skohub-pubsub" target="_blank">Code</a>
+                        <p class="teaser-status">Status: Inactive</p>
+                        <p>SkoHub Pubsub provides the SkoHub core infrastructure, setting up basic inboxes for subjects plus the ability of subscribing to push subscriptions for each new notification. For details, see the <a href="https://blog.skohub.io/2020-06-25-skohub-pubsub/">blog post</a>.</p>
+                    </div>
+                </div>
+                    
+
+                <div class="teaser">
+                  <div class="teaser-content">
+                      <h3>SkoHub Editor</h3>
+                      <p class="teaser-description">Describing &amp; linking learning resources, sending notifications</p>
+                      <a class="button-first" href="https://github.com/skohub-io/skohub-editor" target="_blank">Code</a>
+                      <p class="teaser-status">Status: Inactive</p>
+                      <p>The editor runs in the browser and enables structured description of educational resources published anywhere on the web. It includes validation of the entered content for each field and lookup of controlled values via the API provided by skohub-vocabs. For a walkthrough, see the <a href="https://blog.skohub.io/2020-03-31-skohub-editor/">blog post</a>.</p>
+                  </div>
+                </div>
+        
+                <div class="teaser">
+                  <div class="teaser-content">
+                      <h3>SkoHub Extension</h3>
+                      <p class="teaser-description">SkoHub-editor as an extension for <a href="https://addons.mozilla.org/firefox/addon/skohub-extension/" target="_blank">Firefox</a> and <a href="https://chrome.google.com/webstore/detail/skohub/ghalhmcgaicdcpmdicinaegnoanfmggd" target="_blank">Chrome</a></p>
+                      <a class="button-first" href="https://github.com/skohub-io/skohub-extension" target="_blank">Code</a>
+                      <p class="teaser-status">Status: Inactive</p>
+                      <p>The browser extension allows to easily see the editor and the described web resource side by side.</p>
+                  </div>
+                </div>
+
+              </div>
+            </details>
+
+          </div>
         </section>
     
         <section class="key-product">
@@ -146,7 +210,7 @@
                             <li><a target="_blank" href="https://www.hbz-nrw.de/impressum">Imprint</a></li>
                             <li><a href="mailto:skohub@hbz-nrw.de">skohub@hbz-nrw.de</a></li>
                             <li><a href="https://www.hbz-nrw.de/barrierefreiheit">Accessibility</a></li>
-                            <li><a target="_blank" href="https://socialhub.activitypub.rocks/c/software/skohub">Discourse</a></li>
+                            <li><a target="_blank" href="https://metadaten.community/c/software-und-tools/skohub/9">Discourse</a></li>
                             <li><a target="_blank" href="https://github.com/skohub-io/skohub.io/issues">Issues</a></li>
                         </ul>
                     </article>
